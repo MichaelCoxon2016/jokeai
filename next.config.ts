@@ -1,14 +1,10 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  reactStrictMode: true,
   compiler: {
     styledComponents: true,
   },
-  images: {
-    domains: ['localhost'],
-  },
-  // Disable static optimization for debugging
-  output: 'standalone',
 }
 
 export default nextConfig

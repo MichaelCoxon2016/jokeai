@@ -254,7 +254,7 @@ export function JokeGenerator() {
         body: JSON.stringify({
           category: selectedCategory,
           prompt: customPrompt.trim() || undefined,
-          model: 'google/gemini-2.5-flash-lite-preview-06-17',
+          model: 'google/gemini-2.5-flash',
           creativity: 0.7,
           language: language,
         }),

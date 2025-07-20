@@ -7,7 +7,7 @@ import { JokeGenerationRequest } from '@/types/joke';
 export async function POST(request: NextRequest) {
   try {
     const body: JokeGenerationRequest = await request.json();
-    const { category, prompt, model = 'google/gemini-2.5-flash-lite-preview-06-17', content_filter = 'medium', creativity = 0.7, language = 'en' } = body;
+    const { category, prompt, model = 'google/gemini-2.5-flash', content_filter = 'medium', creativity = 0.7, language = 'en' } = body;
 
     // Validate required fields
     if (!category) {

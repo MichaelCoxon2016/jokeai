@@ -11,7 +11,7 @@ export class OpenRouterClient {
   async generateJoke(
     prompt: string,
     category: string,
-    model: string = 'google/gemini-2.5-flash-lite-preview-06-17',
+    model: string = 'google/gemini-2.5-flash',
     maxTokens: number = 200,
     contentFilter: 'low' | 'medium' | 'high' = 'medium',
     creativity: number = 0.7,

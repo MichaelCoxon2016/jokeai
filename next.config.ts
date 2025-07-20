@@ -4,11 +4,11 @@ const nextConfig: NextConfig = {
   compiler: {
     styledComponents: true,
   },
-  // Memory optimization for builds
-  experimental: {
-    workerThreads: false,
-    cpus: 1,
+  images: {
+    domains: ['localhost'],
   },
+  // Disable static optimization for debugging
+  output: 'standalone',
 }
 
 export default nextConfig

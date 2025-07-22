@@ -83,6 +83,25 @@ const GenerateButton = styled(Button)`
   font-weight: 600;
 `;
 
+const BadgerWarning = styled.div`
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  animation: glow 2s ease-in-out infinite alternate;
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    }
+    to {
+      text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+    }
+  }
+`;
+
 const ResultsSection = styled.div`
   margin-top: 2rem;
 `;
@@ -390,6 +409,10 @@ export function JokeGenerator() {
             (language === 'en' ? '🎲 Generate Joke' : '🎲 Создать анекдот')
           }
         </GenerateButton>
+        
+        <BadgerWarning>
+          ⚠️ WARNING: THIS JOKE GENERATOR LIKES BADGERS!!! ⚠️
+        </BadgerWarning>
       </GeneratorForm>
 
       {error && (

@@ -220,7 +220,6 @@ export function Header() {
       <Nav>
         <NavLink href="/">Generate</NavLink>
         {user && <NavLink href="/favorites">Favorites</NavLink>}
-        <NavLink href="/library">Library</NavLink>
         {user && <NavLink href="/history">History</NavLink>}
       </Nav>
 
